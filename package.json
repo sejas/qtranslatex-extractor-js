@@ -1,0 +1,44 @@
+{
+  "name": "qtranslatex-extractor",
+  "version": "0.0.1",
+  "description": "Receive a string and return and object with each translation. It's perfect to help you to migrate qtranslate content",
+  "main": "./lib/index.js",
+  "types": "./lib/main.d.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sejas/qtranslatex-extractor-js.git"
+  },
+  "keywords": [
+    "qtranslate",
+    "qtranslatex",
+    "wordpress",
+    "js",
+    "javascript",
+    "sejas",
+    "baulen"
+  ],
+  "author": "Antonio Sejas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sejas/qtranslatex-extractor-js/issues"
+  },
+  "homepage": "https://github.com/sejas/qtranslatex-extractor-js#readme",
+  "files": [
+    "lib/**/*"
+  ],
+  "devDependencies": {
+    "@types/jest": "^24.0.6",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "next"
+  }
+}
