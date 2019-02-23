@@ -1,10 +1,20 @@
-const qExtractor = (contentInMultipleLanguages: string) => {
-  return contentInMultipleLanguages;
-};
-export default qExtractor;
-
-const demoContent = `[:en]Discover our range of vegetable tanned leather wallets.
-Handcrafted in Spain by the best artisans.
-Europe & Worldwide Delivery. Free shipping orders over 150€.[:es]Descubre nuestras carteras de piel Premium hechas a mano en Ubrique.
-Envío gratis en España en pedidos superiores a 60€.[:]`;
-qExtractor(demoContent);
+const qExtractor = (contentInMultipleLanguages: string): object => {
+  //   return contentInMultipleLanguages.split(/\[:.*\]/gm);
+  const reg1 = /\[:[\S]*\]/gm
+  const reg2 = /\[:[\S]*\]/gm
+  const content = contentInMultipleLanguages.split(reg1).filter(t => '' !== t)
+  let langs = contentInMultipleLanguages.match(reg2)
+  langs = langs && langs.slice(0, -1).map(l => l.replace(/\[|:|\]/g, ''))
+  //   console.log({ langs, content })
+  if (langs && langs.length === content.length) {
+    const result: any = {}
+    langs.forEach((lang, i) => {
+      //   console.log(lang)
+      result[lang] = content[i]
+    })
+    return result
+  } else {
+    return {}
+  }
+}
+export default qExtractor
