@@ -11,7 +11,7 @@ test('Check length extracted equal to 2', () => {
 })
 
 test('Check languages extracted ["en", "es"]', () => {
-  const contentExtracted2 = qExtractor(demoContent)
-  expect(Object.keys(contentExtracted2)[0]).toBe('en')
-  expect(Object.keys(contentExtracted2)[1]).toBe('es')
+  const contentExtracted2 = qExtractor(demoContent).map(texts => texts.lang)
+  expect(contentExtracted2[0]).toBe('en')
+  expect(contentExtracted2[1]).toBe('es')
 })
