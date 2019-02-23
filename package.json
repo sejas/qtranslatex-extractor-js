@@ -1,6 +1,6 @@
 {
   "name": "qtranslatex-extractor",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Receive a string and return and object with each translation. It's perfect to help you to migrate qtranslate content",
   "main": "./lib/index.js",
   "types": "./lib/main.d.js",
