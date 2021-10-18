@@ -39,7 +39,7 @@
     "lib/**/*"
   ],
   "devDependencies": {
-    "@types/jest": "^24.0.6",
+    "@types/jest": "27.0.2",
     "concurrently": "^4.1.0",
     "jest": "^24.1.0",
     "nodemon": "^1.18.10",
